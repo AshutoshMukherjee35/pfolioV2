@@ -4,7 +4,6 @@ import externalLink from "../../assets/external-link.svg";
 import ScrollAnimation from "react-animate-on-scroll";
 import projects from "./projects";
 
-// Individual Project Component
 function ProjectItem({ title, description, githubUrl, liveUrl, techStack }) {
   return (
     <ScrollAnimation animateIn="flipInX">
@@ -33,7 +32,6 @@ function ProjectItem({ title, description, githubUrl, liveUrl, techStack }) {
   );
 }
 
-// Main Project Component
 export function Project() {
   return (
     <Container id="project">
