@@ -20,6 +20,9 @@ export const Container = styled.section`
 
     img{
       width: 3.4rem;
+      /* Enable hardware acceleration for smoother animations */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -30,20 +33,27 @@ export const Container = styled.section`
     font-size :3rem;
     margin-top: 0rem;
     color: var(--green);
+    /* Enable hardware acceleration */
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
 
   h3{
     margin-top: 2rem;
     color: var(--green);
+    /* Enable hardware acceleration */
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
 
   p{
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
+    /* Enable hardware acceleration */
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
-  
-  
 
   .about-image{
     text-align: center;
@@ -55,6 +65,9 @@ export const Container = styled.section`
      &:hover{
        filter: grayscale(0);
      }
+     /* Enable hardware acceleration */
+     will-change: transform, opacity;
+     transform: translate3d(0, 0, 0);
    }
   }
 
@@ -70,13 +83,17 @@ export const Container = styled.section`
         &:hover{
           filter: grayscale(0);
         }
+        /* Enable hardware acceleration */
+        will-change: transform, opacity;
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
 
   @media (max-width: 960px){
     display: block;
     text-align: center;
-    
+
     .hard-skills{
       justify-content: center;
     }
@@ -91,9 +108,10 @@ export const Container = styled.section`
         &:hover{
           filter: grayscale(0);
         }
+        /* Enable hardware acceleration */
+        will-change: transform, opacity;
+        transform: translate3d(0, 0, 0);
+      }
     }
-    
-    
   }
-
 `

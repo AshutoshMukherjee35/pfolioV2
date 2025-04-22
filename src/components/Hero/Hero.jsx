@@ -1,29 +1,78 @@
 import { BrowserRouter } from "react-router-dom";
 import { Container } from "./styles";
-import ScrollAnimation from "react-animate-on-scroll";
+import { motion } from "framer-motion";
 import Illustration from "../../assets/illustration.svg";
 import { NavHashLink } from "react-router-hash-link";
 import AnimatedText from "./AnimatedText";
 import SocialMediaLinks from "./SocialMediaLinks";
-import Hello from "../../assets/Hello.gif"
+import Hello from "../../assets/Hello.gif";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: custom * 0.1, duration: 0.5 }
+  })
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 50 },
+  visible: (custom) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: custom * 0.1, duration: 0.5 }
+  })
+};
+
+/**
+ * TODO: Consider replacing react-animate-on-scroll with a more performant animation library
+ * like Framer Motion or CSS animations for better smoothness on phone and Windows devices.
+ */
 export function Hero() {
   return (
     <Container id="home">
       <div className="hero-text">
         <AnimatedText delay={0}>
-          <p>
+          <motion.p
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={0}
+          >
             Hello <img src={Hello} alt="Hello" width="20px" />, I'm
-          </p>
+          </motion.p>
         </AnimatedText>
         <AnimatedText delay={200}>
-          <h1>Ashutosh Mukherjee</h1>
+          <motion.h1
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={2}
+          >
+            Ashutosh Mukherjee
+          </motion.h1>
         </AnimatedText>
         <AnimatedText delay={400}>
-          <h3>Frontend Developer</h3>
+          <motion.h3
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={4}
+          >
+            Frontend Developer
+          </motion.h3>
         </AnimatedText>
         <AnimatedText delay={600}>
-          <p className="small-resume">3 Years of Experience</p>
+          <motion.p
+            className="small-resume"
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={6}
+          >
+            3+ Years of Experience
+          </motion.p>
         </AnimatedText>
         <AnimatedText delay={800}>
           <BrowserRouter>
@@ -37,9 +86,14 @@ export function Hero() {
         </AnimatedText>
       </div>
       <div className="hero-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={1000}>
-          <img src={Illustration} alt="Illustration" />
-        </ScrollAnimation>
+        <motion.img
+          src={Illustration}
+          alt="Illustration"
+          variants={fadeInRight}
+          initial="hidden"
+          animate="visible"
+          custom={10}
+        />
       </div>
     </Container>
   );

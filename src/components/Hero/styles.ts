@@ -9,19 +9,31 @@ export const Container = styled.section`
   .hero-text{
     & > p{
       font-size: 1.8rem;
+      /* Enable hardware acceleration */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
     h1{
       font-size: 7rem;
+      /* Enable hardware acceleration */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
 
     h3{
       color:var(--green);
       margin: 1rem 0;
+      /* Enable hardware acceleration */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
 
-    
+
     p.small-resume {
       margin-bottom: 5rem;
+      /* Enable hardware acceleration */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
   }
 // New added
@@ -36,6 +48,9 @@ export const Container = styled.section`
     img,span{
       font-size: 3rem;
       width: 3.5rem;
+      /* Enable hardware acceleration */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -48,6 +63,9 @@ export const Container = styled.section`
   .hero-image{
     img{
       max-width: 500px;
+      /* Enable hardware acceleration */
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -61,7 +79,7 @@ export const Container = styled.section`
         font-size: 5rem;
       }
     }
-    
+
     .hero-image{
       display: none;
     }

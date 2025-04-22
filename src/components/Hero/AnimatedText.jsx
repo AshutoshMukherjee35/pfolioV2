@@ -1,9 +1,23 @@
-import ScrollAnimation from "react-animate-on-scroll";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: custom * 0.1, duration: 0.5 }
+  })
+};
 
 const AnimatedText = ({ children, delay }) => (
-  <ScrollAnimation animateIn="fadeInUp" delay={delay}>
+  <motion.div
+    variants={fadeInUp}
+    initial="hidden"
+    animate="visible"
+    custom={delay / 100}
+  >
     {children}
-  </ScrollAnimation>
+  </motion.div>
 );
 
 export default AnimatedText;
