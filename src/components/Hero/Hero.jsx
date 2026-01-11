@@ -6,6 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 import AnimatedText from "./AnimatedText";
 import SocialMediaLinks from "./SocialMediaLinks";
 import Hello from "../../assets/Hello.gif";
+import { getYearsOfExperience } from "./Utilities/getYearsOfExperience";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -25,10 +26,6 @@ const fadeInRight = {
   })
 };
 
-/**
- * TODO: Consider replacing react-animate-on-scroll with a more performant animation library
- * like Framer Motion or CSS animations for better smoothness on phone and Windows devices.
- */
 export function Hero() {
   return (
     <Container id="home">
@@ -71,7 +68,7 @@ export function Hero() {
             animate="visible"
             custom={6}
           >
-            3+ Years of Experience
+            {getYearsOfExperience()}+ Years of Experience
           </motion.p>
         </AnimatedText>
         <AnimatedText delay={800}>
