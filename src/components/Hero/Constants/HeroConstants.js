@@ -1,0 +1,3 @@
+export const EXPERIENCE_START_YEAR = 2021;
+export const EXPERIENCE_START_MONTH = 8; 
+export const EXPERIENCE_START_DAY = 23;
