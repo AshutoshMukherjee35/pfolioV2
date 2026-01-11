@@ -1,0 +1,1 @@
+export const ResumeLink = "https://drive.google.com/file/d/1KoSE-gGxVoBB38pCd-YoV390uHqI47f1/view?usp=drive_link";
